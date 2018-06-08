@@ -1,6 +1,6 @@
 [package]
 name = "atomic-ref2"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Ryan Leckey <leckey.ryan@gmail.com>"]
 description = "Provides AtomicOptionRef and AtomicRef. Intended to map to java.util.concurrent.atomic.AtomicReference in Java."
 keywords = ["atomic"]
