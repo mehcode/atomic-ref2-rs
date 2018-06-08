@@ -1,4 +1,4 @@
-//! Provides AtomicOptionRef and AtomicRef.
+//! Provides `AtomicOptionRef` and `AtomicRef`.
 //! Intended to map to [java.util.concurrent.atomic.AtomicReference](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReference.html) in Java.
 
 #[cfg(test)]

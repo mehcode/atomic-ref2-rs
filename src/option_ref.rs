@@ -14,7 +14,7 @@ pub struct AtomicOptionRef<T> {
 impl<T> AtomicOptionRef<T> {
     /// Creates a new atomic reference with `None` initial value.
     pub fn new() -> Self {
-        Self::from(None)
+        Self::default()
     }
 
     /// Creates a new atomic reference from the given initial value.
@@ -49,6 +49,12 @@ impl<T> AtomicOptionRef<T> {
             self.ptr.swap(option_arc_to_ptr(value), Ordering::SeqCst),
             false,
         )
+    }
+}
+
+impl<T> Default for AtomicOptionRef<T> {
+    fn default() -> Self {
+        Self::from(None)
     }
 }
 

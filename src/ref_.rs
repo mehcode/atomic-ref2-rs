@@ -12,7 +12,7 @@ impl<T> AtomicRef<T> {
     where
         T: Default,
     {
-        Self::from(T::default())
+        Self::default()
     }
 
     /// Creates a new atomic reference from the given initial value.
@@ -35,5 +35,14 @@ impl<T> AtomicRef<T> {
     /// Swaps the value, returning the previous value.
     pub fn swap(&self, value: impl Into<Arc<T>>) -> Arc<T> {
         self.inner.swap(value.into()).unwrap()
+    }
+}
+
+impl<T> Default for AtomicRef<T>
+where
+    T: Default,
+{
+    fn default() -> Self {
+        Self::from(T::default())
     }
 }

@@ -1,7 +1,6 @@
-use std::isize;
 use std::sync::atomic::{spin_loop_hint, AtomicUsize, Ordering};
 
-const WRITER_BIT: usize = isize::MIN as usize;
+const WRITER_BIT: usize = isize::min_value() as usize;
 
 pub(crate) struct SpinRwLock {
     lock: AtomicUsize,
