@@ -8,7 +8,7 @@
 
 ```toml
 [dependencies]
-atomic-ref2 = "0.1"
+atomic-ref2 = "0.2"
 ```
 
 ## License
