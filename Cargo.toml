@@ -10,3 +10,6 @@ readme = "README.md"
 homepage = "https://github.com/mehcode/atomic-ref-rs"
 
 [dependencies]
+
+[dev-dependencies]
+rand = "0.5"
